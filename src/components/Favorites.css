@@ -30,6 +30,13 @@
 
 .favorites-grid-item {
   display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Force all grid items to have the same width */
+.favorites-grid-item > * {
+  width: 100%;
 }
 
 .favorites-empty {
