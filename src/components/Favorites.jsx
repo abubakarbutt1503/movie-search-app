@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFavorites } from '../context/FavoritesContext.js';
+import { useFavorites } from '../context/FavoritesContext.jsx';
 import MovieCard from './MovieCard.jsx';
 import '../styles/components/Favorites.css';
 

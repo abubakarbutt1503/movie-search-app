@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar.jsx';
 import MovieGrid from './components/MovieGrid.jsx';
 import MovieDetail from './components/MovieDetail.jsx';
 import Favorites from './components/Favorites.jsx';
-import { FavoritesProvider, useFavorites } from './context/FavoritesContext.js';
+import { FavoritesProvider, useFavorites } from './context/FavoritesContext.jsx';
 import { searchMovies } from './services/movieService';
 import './styles/layout/App.css';
 
