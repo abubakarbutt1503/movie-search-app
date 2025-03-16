@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieCard from './MovieCard.jsx';
-import './MovieGrid.css';
+import '../styles/components/MovieGrid.css';
 
 const MovieGrid = ({ movies, loading, onMovieClick }) => {
   if (loading) {

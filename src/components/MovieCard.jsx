@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFavorites } from '../context/FavoritesContext.js';
-import './MovieCard.css';
+import '../styles/components/MovieCard.css';
 
 const MovieCard = ({ movie, onClick }) => {
   const { isFavorite, toggleFavorite } = useFavorites();

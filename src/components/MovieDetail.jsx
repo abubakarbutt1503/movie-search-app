@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getMovieDetails } from '../services/movieService';
-import './MovieDetail.css';
+import '../styles/components/MovieDetail.css';
 
 const MovieDetail = ({ movieId, onClose, onToggleFavorite, isFavorite }) => {
   const [movie, setMovie] = useState(null);

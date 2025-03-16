@@ -5,7 +5,7 @@ import MovieDetail from './components/MovieDetail.jsx';
 import Favorites from './components/Favorites.jsx';
 import { FavoritesProvider, useFavorites } from './context/FavoritesContext.js';
 import { searchMovies } from './services/movieService';
-import './App.css';
+import './styles/layout/App.css';
 
 function AppContent() {
   const [movies, setMovies] = useState([]);
