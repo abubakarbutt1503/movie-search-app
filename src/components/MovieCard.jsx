@@ -1,11 +1,22 @@
 import React from 'react';
+import { useFavorites } from '../context/FavoritesContext.js';
 import './MovieCard.css';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onClick }) => {
+  const { isFavorite, toggleFavorite } = useFavorites();
   const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=No+Poster+Available';
+  const isMovieFavorite = isFavorite(movie.imdbID);
+
+  const handleFavoriteClick = (e) => {
+    e.stopPropagation(); // Prevent triggering the card click
+    toggleFavorite(movie);
+  };
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={() => onClick(movie.imdbID)}>
+      <div className="favorite-icon" onClick={handleFavoriteClick}>
+        <i className={`fa ${isMovieFavorite ? 'fa-heart' : 'fa-heart-o'}`}></i>
+      </div>
       <div className="movie-poster">
         <img src={posterUrl} alt={movie.Title} />
       </div>

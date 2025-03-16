@@ -7,6 +7,9 @@ A React application that allows users to search for movies using the OMDB API. T
 - Search for movies by title
 - Dynamic search results as you type
 - Display random popular movies when no search term is provided
+- View detailed information about selected movies
+- Add/remove movies to favorites
+- Store favorites locally for later access
 - Responsive design that works on desktop and mobile devices
 - Clean and modern UI
 
@@ -44,11 +47,16 @@ Before running this application, you need to:
 1. Type a movie title in the search bar
 2. Results will appear automatically as you type
 3. If you clear the search bar, random popular movies will be displayed
+4. Click on any movie card to view detailed information
+5. Click the heart icon on a movie card or in the movie details to add/remove it from favorites
+6. Click the "Show Favorites" button to view your favorite movies
+7. Your favorites are stored locally and will persist even if you close the browser
 
 ## Technologies Used
 
 - React.js with JSX
 - CSS Grid and Flexbox for layout
+- Local Storage for saving favorites
 - OMDB API for movie data
 
 ## Project Structure
@@ -57,6 +65,10 @@ Before running this application, you need to:
   - `SearchBar.jsx` - Handles user input for searching
   - `MovieGrid.jsx` - Displays the grid of movie cards
   - `MovieCard.jsx` - Individual movie card component
+  - `MovieDetail.jsx` - Displays detailed information about a selected movie
+  - `Favorites.jsx` - Displays the user's favorite movies
+- `src/context/` - React context
+  - `FavoritesContext.jsx` - Manages the favorites functionality
 - `src/services/` - API and data handling
   - `movieService.js` - Handles API calls to OMDB
 
@@ -82,3 +94,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - [OMDB API](http://www.omdbapi.com/) for providing the movie data
 - [Create React App](https://create-react-app.dev/) for the project setup
+- [Font Awesome](https://fontawesome.com/) for the icons
