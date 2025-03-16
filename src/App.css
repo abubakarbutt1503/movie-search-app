@@ -128,6 +128,14 @@ body {
   margin-top: auto;
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .app-footer a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -138,6 +146,12 @@ body {
 .app-footer a:hover {
   color: var(--primary-color);
   text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 5px;
 }
 
 /* Add Font Awesome for heart icons */

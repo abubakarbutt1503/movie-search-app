@@ -64,7 +64,7 @@ function AppContent() {
     <div className="app">
       <header className="app-header">
         <h1>Movie Search App</h1>
-        <p>Search for your favorite movies using the OMDB API</p>
+        <p>Search for your favorite movies</p>
       </header>
       
       <div className="app-controls">
@@ -99,7 +99,10 @@ function AppContent() {
       )}
       
       <footer className="app-footer">
-        <p>Powered by <a href="http://www.omdbapi.com/" target="_blank" rel="noopener noreferrer">OMDB API</a></p>
+        <div className="footer-content">
+          <p>Powered by <a href="http://www.omdbapi.com/" target="_blank" rel="noopener noreferrer">OMDB API</a></p>
+          <p className="copyright">&copy; 2025 Movie Search App. All Rights Reserved.</p>
+        </div>
       </footer>
     </div>
   );
