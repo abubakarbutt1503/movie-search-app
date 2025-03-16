@@ -11,6 +11,7 @@
   display: flex;
   height: 100%;
   width: 100%;
+  min-height: 450px;
 }
 
 /* Force all grid items to have the same width */
@@ -69,6 +70,10 @@
     gap: 15px;
   }
   
+  .movie-grid-item {
+    min-height: 400px;
+  }
+  
   .loading, .no-results {
     padding: 40px 20px;
     font-size: 16px;
@@ -84,6 +89,10 @@
   .movie-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
+  }
+  
+  .movie-grid-item {
+    min-height: 350px;
   }
   
   .loading, .no-results {
