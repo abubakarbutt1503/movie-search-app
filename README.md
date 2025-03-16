@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Movie Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that allows users to search for movies using the OMDB API. The app displays movie information in a clean, responsive grid layout.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for movies by title
+- Dynamic search results as you type
+- Display random popular movies when no search term is provided
+- Responsive design that works on desktop and mobile devices
+- Clean and modern UI
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before running this application, you need to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Get an API key from [OMDB API](http://www.omdbapi.com/)
+2. Have Node.js and npm installed on your machine
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository
+2. Navigate to the project directory
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Open `src/services/movieService.js` and replace `YOUR_OMDB_API_KEY` with your actual OMDB API key:
+   ```javascript
+   const API_KEY = 'your_actual_api_key_here';
+   ```
+5. Start the development server with API key check:
+   ```
+   npm run start-with-key-check
+   ```
+   Or use the standard start command:
+   ```
+   npm start
+   ```
+6. Open your browser and navigate to `http://localhost:3000`
 
-### `npm run build`
+## How to Use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Type a movie title in the search bar
+2. Results will appear automatically as you type
+3. If you clear the search bar, random popular movies will be displayed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React.js with JSX
+- CSS Grid and Flexbox for layout
+- OMDB API for movie data
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `src/components/` - React components
+  - `SearchBar.jsx` - Handles user input for searching
+  - `MovieGrid.jsx` - Displays the grid of movie cards
+  - `MovieCard.jsx` - Individual movie card component
+- `src/services/` - API and data handling
+  - `movieService.js` - Handles API calls to OMDB
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Using JSX Files
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project uses `.jsx` file extensions for React components to better distinguish them from regular JavaScript files. This provides several benefits:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Better syntax highlighting in code editors
+2. Clearer indication of which files contain JSX syntax
+3. Improved code organization
 
-## Learn More
+If you need to convert existing `.js` files to `.jsx`, you can use the included migration script:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run migrate-to-jsx
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is open source and available under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgements
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [OMDB API](http://www.omdbapi.com/) for providing the movie data
+- [Create React App](https://create-react-app.dev/) for the project setup
